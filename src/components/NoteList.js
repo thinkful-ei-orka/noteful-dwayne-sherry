@@ -1,13 +1,14 @@
 import React from 'react';
+import NoteDisplay from './NoteDisplay';
 
-function NoteList() {
+function NoteList(props) {
   return (
     <div className="notes-container">
-    <div className="notes">
-      <h2 className="note-title">Note 1</h2>
-      <p className="note-modified">Date modified</p>
-      <button type="button" className="delete-note">Delete</button>
-    </div>
+    {props.notes.map(note => <NoteDisplay 
+      name={note.name}
+      modified={note.modified}
+      key={note.id}
+      />)}
     <button type="button" className="add-note">Add Note</button>
   </div>
   )

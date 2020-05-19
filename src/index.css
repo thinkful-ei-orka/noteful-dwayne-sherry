@@ -69,3 +69,7 @@ aside {
 .note-content {
   margin: 10px;
 }
+
+.active {
+  background-color: cadetblue;
+}
