@@ -7,18 +7,19 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = { dummyStore }
+    console.log(this.state.dummyStore.folders)
   }
+
 
   render () {
     return (
       <>
-      <header>
-        <h1>Noteful</h1>
-    </header>
-      <main className='App'>
-        <FolderSidebar /* List of folders, add-folder button fn */ />
-        {/* content goes here */}
-      </main>
+        <header>
+          <h1>Noteful</h1>
+        </header>
+        <main className='App'>
+         <FolderSidebar folders={this.state.dummyStore.folders} />
+        </main>
       </>
     );
   }

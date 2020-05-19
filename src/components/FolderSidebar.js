@@ -1,13 +1,17 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import FolderList from './FolderList'
 
 function FolderSidebar(props) {
   return (
     <aside>
-      <button type="button" class="go-back">Go back</button>
-      <p class="current-folder">Folder 3</p>
+      {props.folders.map(folder => <FolderList 
+        id={folder.id}
+        key={folder.id}
+        name={folder.name}
+      />)}
+      <button type="button" className="add-folder">Add Folder</button>
     </aside>
   )
 }
 
-export default FolderSidebar.js
+export default FolderSidebar;
