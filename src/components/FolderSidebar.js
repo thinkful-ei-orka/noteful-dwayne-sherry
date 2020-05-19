@@ -8,6 +8,7 @@ function FolderSidebar(props) {
         id={folder.id}
         key={folder.id}
         name={folder.name}
+        highlighted={props.folderId ? props.folderId === folder.id : false}
       />)}
       <button type="button" className="add-folder">Add Folder</button>
     </aside>

@@ -1,6 +1,8 @@
 import React from 'react';
 
-function SingleFolderSidebar() {
+function SingleFolderSidebar(props) {
+  console.log("SingleFolderSidebar ran");
+  console.log(props);
   return (
     <aside>
       <button type="button" className="go-back">Go back</button>

@@ -8,6 +8,7 @@ function NoteList(props) {
       name={note.name}
       modified={note.modified}
       key={note.id}
+      id={note.id}
       />)}
     <button type="button" className="add-note">Add Note</button>
   </div>
