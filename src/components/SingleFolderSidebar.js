@@ -1,14 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function SingleFolderSidebar(props) {
-  console.log("SingleFolderSidebar ran");
-  console.log(props);
   return (
     <aside>
       <button type="button" className="go-back">Go back</button>
       <p className="current-folder">Folder 3</p>
     </aside>
   )
+}
+
+SingleFolderSidebar.propTypes = {
+  folderName: PropTypes.string,
+  folderId: PropTypes.string,
 }
 
 export default SingleFolderSidebar;

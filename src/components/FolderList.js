@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function FolderList(props) {
   // if using Link
@@ -14,5 +15,10 @@ function FolderList(props) {
   )
 }
 
+FolderList.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  highlighted: PropTypes.bool,
+}
 
 export default FolderList;

@@ -52,12 +52,7 @@ class App extends React.Component {
                   return true;
                 } return false;
               })}
-              folderId={routeProps.match.params.folderId}
-              folder={this.state.dummyStore.folders.filter(folder => {
-                if(folder.id === routeProps.match.params.folderId) {
-                  return true;
-                } return false;
-              })}
+              folder={this.state.dummyStore.folders}
             />}
           />
         </main>

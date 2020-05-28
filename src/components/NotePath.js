@@ -1,10 +1,9 @@
 import React from  'react';
 import SingleFolderSidebar from './SingleFolderSidebar';
 import SingleNote from './SingleNote';
+import PropTypes from 'prop-types';
 
 function NotePath(props) {
-  console.log("Note Path")
-  console.log(props)
   return (
     <div>
       <SingleFolderSidebar folderId={props.folder.id} folderName={props.folder.name}/>
@@ -12,6 +11,15 @@ function NotePath(props) {
     </div>
 
   )
+}
+
+NotePath.propTypes = {
+  noteId: PropTypes.string,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  content: PropTypes.string,
+  modified: PropTypes.string,
+  folderId: PropTypes.string,
 }
 
 export default NotePath;

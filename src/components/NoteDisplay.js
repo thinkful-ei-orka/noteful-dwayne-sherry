@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function NoteDisplay(props) {
 
@@ -15,6 +16,12 @@ function NoteDisplay(props) {
       <button type="button" className="delete-note">Delete</button>
     </div>
   )
+}
+
+NoteDisplay.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  modified: PropTypes.string,
 }
 
 export default NoteDisplay;

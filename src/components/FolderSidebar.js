@@ -1,5 +1,6 @@
 import React from 'react';
-import FolderList from './FolderList'
+import FolderList from './FolderList';
+import PropTypes from 'prop-types';
 
 function FolderSidebar(props) {
   return (
@@ -13,6 +14,11 @@ function FolderSidebar(props) {
       <button type="button" className="add-folder">Add Folder</button>
     </aside>
   )
+}
+
+FolderSidebar.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
 }
 
 export default FolderSidebar;
